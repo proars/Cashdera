@@ -1,0 +1,87 @@
+END USER LICENSE AGREEMENT
+Cashdera
+Effective date: 2026-04-28
+
+This End User License Agreement ("Agreement") is a legal agreement between you ("User", "you") and Ars M ("Vendor", "we", "us") for the use of Cashdera and related documentation (the "Software").
+
+By installing, copying, or using the Software, you agree to this Agreement. If you do not agree, do not install or use the Software.
+
+1. License Grant
+
+Subject to your compliance with this Agreement, Vendor grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Software for your personal or internal business purposes.
+
+The current public beta version is provided free of charge. Future versions may require payment of a license fee, subscription, or one-time purchase. Continued use of a future paid version requires acceptance of the applicable pricing terms at that time.
+
+This Agreement does not sell the Software to you. Vendor and its licensors retain all right, title, and interest in and to the Software.
+
+2. Restrictions
+
+You may not:
+
+- copy, redistribute, sublicense, rent, lease, sell, or host the Software for third parties, except as expressly allowed by Vendor in writing;
+- reverse engineer, decompile, disassemble, or attempt to derive source code from the Software, except to the extent such restriction is prohibited by applicable law;
+- remove or alter copyright, trademark, proprietary, or third-party notices;
+- use the Software to violate applicable law or third-party rights;
+- bypass licensing, activation, trial, or access-control mechanisms.
+
+3. Beta and Pre-Release Software
+
+If the Software is labeled beta, preview, trial, or pre-release, it is provided for evaluation and feedback. Beta Software may contain defects, may change without notice, and may not be suitable for production financial workflows.
+
+You are responsible for keeping independent backups of your original GnuCash files and any exported data.
+
+4. Local Data and Privacy
+
+The Software is designed as a local-first desktop application. It imports and analyzes GnuCash files locally on your device and stores local application data in the operating-system application data directory.
+
+Deleting an import through the Software is intended to remove local application data for that import only and not the original GnuCash source file selected by you.
+
+The Software does not intentionally upload your GnuCash books, imported financial records, local SQLite databases, or analytics data to Vendor servers.
+
+See PRIVACY.md for the current privacy statement.
+
+5. No Financial, Accounting, Tax, or Legal Advice
+
+The Software is an analysis tool. It does not provide financial, accounting, tax, investment, or legal advice. You are responsible for verifying all reports, exports, calculations, and decisions made using the Software.
+
+6. Backups and Data Responsibility
+
+You are responsible for backing up your GnuCash files and any related data before importing, analyzing, deleting, exporting, or otherwise using the Software.
+
+Vendor is not responsible for loss, corruption, or unavailability of user data except to the extent such limitation is prohibited by applicable law.
+
+7. Updates and Pricing Changes
+
+Vendor may provide updates, fixes, or new versions. Updates may be subject to additional terms or fees. Vendor is not obligated to provide maintenance, support, or updates unless separately agreed in writing.
+
+If a future version of the Software transitions from free to paid, Vendor will communicate the applicable pricing terms before requiring payment. Continued use of a paid version after the applicable grace period constitutes acceptance of those terms.
+
+8. Third-Party Components
+
+The Software includes third-party open-source components. Those components are licensed by their respective owners under their own license terms. See THIRD_PARTY_NOTICES.txt.
+
+This Agreement applies only to Vendor's proprietary Software and does not limit rights granted to you by third-party open-source licenses.
+
+9. Trademarks and Affiliation
+
+GnuCash is a name associated with the GnuCash project and its respective rights holders.
+
+The Software is not affiliated with, sponsored by, or endorsed by the GnuCash project unless Vendor states otherwise in a separate written notice.
+
+10. Warranty Disclaimer
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, QUIET ENJOYMENT, OR ERROR-FREE OPERATION.
+
+11. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, VENDOR WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS, LOST REVENUE, LOSS OF DATA, BUSINESS INTERRUPTION, OR COST OF SUBSTITUTE SERVICES.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, VENDOR'S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE SOFTWARE WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE SOFTWARE DURING THE TWELVE MONTHS BEFORE THE CLAIM.
+
+12. Termination
+
+This Agreement remains in effect until terminated. Your rights terminate automatically if you violate this Agreement. Upon termination, you must stop using and uninstall the Software.
+
+13. Contact
+
+Questions about this Agreement may be submitted through the issue tracker for the GitHub repository where this release is published.

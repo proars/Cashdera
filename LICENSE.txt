@@ -1,0 +1,13 @@
+PROPRIETARY SOFTWARE LICENSE NOTICE
+Cashdera
+Copyright (c) 2026 Ars M. All rights reserved.
+
+This software, including its source code, object code, binaries, user interface, documentation, and related materials, is proprietary and confidential to Ars M and/or its licensors.
+
+No rights are granted except as expressly stated in a separate written agreement or in EULA.txt.
+
+You may not copy, modify, distribute, sublicense, sell, rent, lease, publish, disclose, reverse engineer, decompile, disassemble, or create derivative works from this software except as expressly permitted by EULA.txt or by applicable law.
+
+This proprietary notice applies only to Ars M's software. Third-party open-source components included with or used by the software remain governed by their own license terms. See THIRD_PARTY_NOTICES.txt.
+
+GnuCash is associated with the GnuCash project and its respective rights holders. This software is not affiliated with, sponsored by, or endorsed by the GnuCash project unless separately stated in writing.

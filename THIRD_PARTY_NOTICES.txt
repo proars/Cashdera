@@ -1,0 +1,135 @@
+THIRD-PARTY NOTICES
+Cashdera
+Generated date: 2026-04-28
+Last verified against locked direct runtime dependencies: 2026-05-03
+
+This product includes third-party components governed by their own license terms. Vendor's proprietary license applies only to Vendor's own software and does not override rights granted by third-party licenses.
+
+This notice lists direct runtime dependencies used in the Cashdera 0.1.0 Windows build. Development-only and build-only tooling is intentionally excluded.
+
+Direct runtime JavaScript dependencies
+--------------------------------------
+
+@tauri-apps/api 2.10.1
+License: Apache-2.0 OR MIT
+
+@tauri-apps/plugin-dialog 2.6.0
+License: MIT OR Apache-2.0
+
+@tauri-apps/plugin-fs 2.4.5
+License: MIT OR Apache-2.0
+
+@tauri-apps/plugin-opener 2.5.3
+License: MIT OR Apache-2.0
+
+class-variance-authority 0.7.1
+License: Apache-2.0
+
+clsx 2.1.1
+License: MIT
+
+echarts 5.6.0
+License: Apache-2.0
+
+lucide-react 0.575.0
+License: ISC
+
+react 19.2.4
+License: MIT
+
+react-dom 19.2.4
+License: MIT
+
+react-router-dom 7.13.1
+License: MIT
+
+sonner 2.0.7
+License: MIT
+
+tailwind-merge 3.5.0
+License: MIT
+
+Direct Rust dependencies
+------------------------
+
+tauri 2.10.2
+License: Apache-2.0 OR MIT
+
+tauri-plugin-dialog 2.6.0
+License: Apache-2.0 OR MIT
+
+tauri-plugin-fs 2.4.5
+License: Apache-2.0 OR MIT
+
+tauri-plugin-opener 2.5.3
+License: Apache-2.0 OR MIT
+
+serde 1.0.228
+License: MIT OR Apache-2.0
+
+serde_json 1.0.149
+License: MIT OR Apache-2.0
+
+rusqlite 0.32.1
+License: MIT
+
+SQLite
+License: Public Domain
+Note: SQLite is bundled through rusqlite/libsqlite3-sys in this project.
+
+chrono 0.4.43
+License: MIT OR Apache-2.0
+
+chrono-tz 0.8.6
+License: MIT OR Apache-2.0
+
+quick-xml 0.38.4
+License: MIT
+
+flate2 1.1.9
+License: MIT OR Apache-2.0
+
+sha2 0.10.9
+License: MIT OR Apache-2.0
+
+csv 1.4.0
+License: Unlicense/MIT
+
+printpdf 0.7.0
+License: MIT
+
+rust_decimal 1.41.0
+License: MIT
+
+tracing 0.1.44
+License: MIT
+
+tracing-subscriber 0.3.23
+License: MIT
+
+License and copyright notices checked
+-------------------------------------
+
+The packages above were checked against their bundled package metadata and license/notice files. License files found in the checked package distributions include MIT, Apache-2.0, ISC, Unlicense/MIT, SPDX license files, COPYING files, and NOTICE files where provided.
+
+Notable upstream notices and copyright statements include:
+
+- Tauri packages: Copyright (c) 2017 - Present Tauri Apps Contributors. Tauri plugin packages also identify 2019-2022 The Tauri Programme in the Commons Conservancy.
+- ECharts: Copyright 2017-2024 The Apache Software Foundation. ECharts includes software developed at The Apache Software Foundation.
+- clsx: Copyright (c) Luke Edwards.
+- Lucide: Copyright notices are held by Cole Bemis for Feather portions and by Lucide Contributors for Lucide portions.
+- React and React DOM: Copyright (c) Meta Platforms, Inc. and affiliates.
+- React Router DOM: Copyright notices include React Training LLC and Remix Software Inc.
+- Sonner: Copyright (c) 2023 Emil Kowalski.
+- tailwind-merge: Copyright (c) 2021 Dany Castillo.
+- rusqlite: Copyright (c) 2014-2021 The rusqlite developers.
+- chrono: Copyright notices include Kang Seonghoon and other chrono contributors.
+- chrono-tz: Copyright (c) 2016 Djzin.
+- quick-xml: Copyright (c) 2016 Johann Tuffe.
+- flate2: Copyright (c) 2014-2026 Alex Crichton.
+- sha2: Copyright notices include Graydon Hoare and Mozilla Foundation.
+- csv: Copyright (c) 2015 Andrew Gallant.
+- printpdf: Copyright (c) 2017 Felix Schütt.
+- rust_decimal: Copyright (c) 2020 Paul Mason.
+- tracing: Copyright (c) 2019 Tokio Contributors.
+- tracing-subscriber: Copyright (c) 2019 Tokio Contributors.
