@@ -2,7 +2,7 @@
 
 **GnuCash is great for bookkeeping. Analytics? Not so much.**
 
-Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, budget tracking, and net worth reports — all running locally on your Windows machine. No cloud. No account. No subscription. Your data never leaves your computer.
+Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, and net worth reports — all running locally on your Windows machine. No cloud. No account. No subscription. Your data never leaves your computer.
 
 > **Public Beta** — free to download and use. Report bugs and ideas via [GitHub Issues](https://github.com/proars/Cashdera/issues).
 
@@ -12,8 +12,12 @@ Cashdera opens your `.gnucash` file and turns it into dashboards, spending trend
 
 **[Download latest release →](https://github.com/proars/Cashdera/releases/latest)**
 
-`Cashdera_0.1.0_x64-setup.exe` — recommended for most users  
-`Cashdera_0.1.0_x64_en-US.msi` — alternative MSI installer
+**v0.2.0** (latest):
+- `Cashdera_0.2.0_x64-setup.exe` — recommended for most users  
+- `Cashdera_0.2.0_x64_en-US.msi` — alternative MSI installer
+- `checksums-0.2.0.txt` — SHA256 hashes for verification
+
+See also: **[Changelog](CHANGELOG.md)** and **[Release Notes](../RELEASE_NOTES.md)** for version-to-version changes.
 
 No dependencies. Just install and open your `.gnucash` file.
 
@@ -37,22 +41,23 @@ It contains ~20 accounts and 22 transactions (USD, Dec 2024 – May 2026) — en
 
 <p>
   <img src="screenshots/dashboard.png" width="49%" alt="Dashboard" />
+  <img src="screenshots/Money Flow.png" width="49%" alt="Money Flow" />
+</p>
+<p>
   <img src="screenshots/postings.png" width="49%" alt="Transactions" />
-</p>
-<p>
   <img src="screenshots/reports.png" width="49%" alt="Reports" />
+</p>
+<p>
   <img src="screenshots/trends.png" width="49%" alt="Trends" />
-</p>
-<p>
   <img src="screenshots/categories.png" width="49%" alt="Categories" />
-  <img src="screenshots/net-worth.png" width="49%" alt="Net Worth" />
 </p>
 <p>
+  <img src="screenshots/net-worth.png" width="49%" alt="Net Worth" />
   <img src="screenshots/multi-year-compare.png" width="49%" alt="Multi-Year Compare" />
 </p>
 
 ### Dashboard — the full picture in seconds
-Monthly cash flow chart, expenses by category, key metrics (income, expenses, balance, accounts, transactions, postings) — all at a glance. Account count excludes the technical root container from GnuCash. And a **Sankey money flow diagram** that shows exactly where money came from and where it went, with three levels of detail. Filter by any date range.
+Monthly cash flow chart, expenses by category, key metrics (income, expenses, balance, accounts, transactions, postings) — all at a glance. Account count excludes the technical root container from GnuCash. A separate **Money Flow** tab loads the Sankey diagram on demand, showing where money came from and where it went with three levels of detail: Compact, Balanced, Detailed. In Detailed mode, the diagram is still aggregated for readability, so node count can be lower than the Dashboard Accounts metric. Date Range is off by default after app launch, so pages start with all available data until you choose a range.
 
 ### Transactions — actually searchable
 Full-text search across all memos and descriptions. Filter by category, account, or direction (income / expense). Expandable split rows to see how a transaction breaks down across accounts. Pagination (25 / 50 / 100 per page). Export to CSV with all active filters applied.
@@ -70,17 +75,14 @@ Year-over-year comparison on a single chart. Select a specific category or top-N
 ### Net Worth — assets and liabilities over time
 Monthly timeline with stacked asset vs. liability bars. Balance sheet snapshot for any selected month. Per-account drilldown: click any account to see its balance trend over time.
 
-### Budget vs Actual — planning with real numbers
-Set monthly budgets by category. See variance in both currency and percentage. Inline editing — changes save instantly. Copy last month's budget with one click. Bulk import from CSV.
-
 ### Year Comparison — Jan–Dec across multiple years
 Overlay up to 10 years on one chart. Metric selector: income, expenses, net result, or category spend. Optional YoY% toggle. 12-row monthly comparison table synced with the chart.
 
 ### Categories — deep expense breakdown
 Hierarchical category tree up to 3 levels with rolled-up parent totals. Search with instant results. Each category's share of total expenses. Expandable subcategories with improved tree navigation. Filter by date range.
 
-### Multi-book support
-Import and store multiple GnuCash books. Dashboard, transactions, reports, net worth, and categories all aggregate across selected books automatically. Mixed-currency books show an explicit warning instead of silently summing across currencies.
+### Current book workflow
+Import and store multiple GnuCash books, then choose one current book for analysis. Dashboard, transactions, reports, net worth, and categories all read from that current book. Mixed-currency books show an explicit warning instead of silently summing across currencies.
 
 ---
 
@@ -92,7 +94,6 @@ Import and store multiple GnuCash books. Dashboard, transactions, reports, net w
 | Monthly summary | CSV |
 | Top payees | CSV |
 | Accounts overview | CSV |
-| Budget vs Actual | CSV |
 | Full financial summary | PDF |
 
 ---
@@ -103,7 +104,7 @@ Import and store multiple GnuCash books. Dashboard, transactions, reports, net w
 2. **Import your `.gnucash` file** — plain XML and gzip-compressed both work; format detected automatically
 3. **Explore your data** — all pages load instantly
 
-Import runs in the background with a progress indicator. Cancel at any time. After a successful import or re-import, Cashdera automatically switches the app to that book. Cashdera keeps an import history and adds a **"file changed" badge** when your source `.gnucash` file is updated — one click to re-import without finding the file again. You can also delete a local import from the Recent imports list; this removes Cashdera's local copy and history, not your original `.gnucash` file.
+Import runs in the background with a progress indicator. Cancel at any time. After a successful import or re-import, Cashdera automatically switches the app to that book. Re-import results are tied to the active background job, so the confirmation belongs to the file you just refreshed. Cashdera keeps an import history and adds a **"file changed" badge** when your source `.gnucash` file is updated — one click to re-import without finding the file again. You can also delete a local import from the Recent imports list; this removes Cashdera's local copy and history, not your original `.gnucash` file.
 
 Heavy computations run once at import and are stored in local SQLite cache tables. Page switches are instant even on books with 100k+ transactions.
 
@@ -113,6 +114,8 @@ Heavy computations run once at import and are stored in local SQLite cache table
 
 - **Theme** — light, dark, or system default
 - **Timezone** — auto-detect or manual selection from 25+ IANA zones (affects date grouping in all reports)
+- **Diagnostics** — About page can copy diagnostics text and export a ZIP with runtime error logs and recent import/job context
+- **Desktop UI behavior** — native browser right-click context menu is disabled across the app
 
 ---
 

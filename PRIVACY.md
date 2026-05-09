@@ -13,7 +13,7 @@ The application may read and process:
 - selected `.gnucash`, XML, or supported GnuCash-related files;
 - account names, transaction descriptions, memos, dates, amounts, and commodity/currency metadata from selected files;
 - derived analytics such as monthly cashflow, category summaries, budgets, trends, and net worth values;
-- local application settings such as theme, timezone, selected books, and date range filters.
+- local application settings such as theme, timezone, and current book selection.
 
 The application stores local SQLite databases and settings in the operating-system application data directory for the app.
 
