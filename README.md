@@ -2,9 +2,9 @@
 
 **GnuCash is great for bookkeeping. Analytics? Not so much.**
 
-Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, and net worth reports — all running locally on your Windows machine. No cloud. No account. No subscription. Your data never leaves your computer.
+Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, and net worth reports — all running locally on your desktop. No cloud. No account. No subscription. Your data never leaves your computer.
 
-> **Public Beta** — free to download and use. Report bugs and ideas via [GitHub Issues](https://github.com/proars/Cashdera/issues).
+> **First Public Release** — free to download and use. Report bugs and ideas via [GitHub Issues](https://github.com/proars/Cashdera/issues).
 
 ---
 
@@ -12,10 +12,12 @@ Cashdera opens your `.gnucash` file and turns it into dashboards, spending trend
 
 **[Download latest release →](https://github.com/proars/Cashdera/releases/latest)**
 
-**v0.2.0** (latest):
-- `Cashdera_0.2.0_x64-setup.exe` — recommended for most users  
-- `Cashdera_0.2.0_x64_en-US.msi` — alternative MSI installer
-- `checksums-0.2.0.txt` — SHA256 hashes for verification
+**v1.0.0** (latest):
+
+- Windows installers: `Cashdera_1.0.0_x64-setup.exe`, `Cashdera_1.0.0_x64_en-US.msi`
+- macOS: universal binary (`.dmg` installer)
+- Linux: `Cashdera_1.0.0_x64.deb`, `Cashdera_1.0.0_x64.rpm`, `Cashdera_1.0.0_x64.AppImage`
+- `checksums.txt` — SHA256 hashes for verification
 
 See also: **[Changelog](CHANGELOG.md)** and **[Release Notes](../RELEASE_NOTES.md)** for version-to-version changes.
 
@@ -33,55 +35,57 @@ It contains ~20 accounts and 22 transactions (USD, Dec 2024 – May 2026) — en
 2. Open Cashdera and click **Import**.
 3. Select `demo.gnucash` — it loads in seconds.
 
-> **Windows SmartScreen warning?** The beta installer is unsigned. Click "More info → Run anyway." Each release includes `checksums.txt` with SHA256 hashes — see [Verify the installer](#verify-the-installer).
+> **Windows SmartScreen warning?** Windows installer may be unsigned. Click "More info → Run anyway." Each release includes `checksums.txt` with SHA256 hashes — see [Verify release checksums](#verify-release-checksums).
 
 ---
 
 ## What Cashdera gives you
 
-<p>
-  <img src="screenshots/dashboard.png" width="49%" alt="Dashboard" />
-  <img src="screenshots/Money Flow.png" width="49%" alt="Money Flow" />
-</p>
-<p>
-  <img src="screenshots/postings.png" width="49%" alt="Transactions" />
-  <img src="screenshots/reports.png" width="49%" alt="Reports" />
-</p>
-<p>
-  <img src="screenshots/trends.png" width="49%" alt="Trends" />
-  <img src="screenshots/categories.png" width="49%" alt="Categories" />
-</p>
-<p>
-  <img src="screenshots/net-worth.png" width="49%" alt="Net Worth" />
-  <img src="screenshots/multi-year-compare.png" width="49%" alt="Multi-Year Compare" />
-</p>
+Screenshots:
+
+- ![Dashboard](screenshots/dashboard.png)
+- ![Money Flow](screenshots/Money%20Flow.png)
+- ![Transactions](screenshots/postings.png)
+- ![Reports](screenshots/reports.png)
+- ![Trends](screenshots/trends.png)
+- ![Categories](screenshots/categories.png)
+- ![Net Worth](screenshots/net-worth.png)
+- ![Multi-Year Compare](screenshots/multi-year-compare.png)
 
 ### Dashboard — the full picture in seconds
+
 Monthly cash flow chart, expenses by category, key metrics (income, expenses, balance, accounts, transactions, postings) — all at a glance. Account count excludes the technical root container from GnuCash. A separate **Money Flow** tab loads the Sankey diagram on demand, showing where money came from and where it went with three levels of detail: Compact, Balanced, Detailed. In Detailed mode, the diagram is still aggregated for readability, so node count can be lower than the Dashboard Accounts metric. Date Range is off by default after app launch, so pages start with all available data until you choose a range.
 
 ### Transactions — actually searchable
-Full-text search across all memos and descriptions. Filter by category, account, or direction (income / expense). Expandable split rows to see how a transaction breaks down across accounts. Pagination (25 / 50 / 100 per page). Export to CSV with all active filters applied.
+
+Full-text search across all memos and descriptions. Filter by category, account, or direction (income / expense). Expandable split rows to see how a transaction breaks down across accounts. Pagination (25 / 50 / 100 per page). Export to CSV or XLSX with all active filters applied.
 
 ### Reports — ready to share
+
 - **Monthly summary** — income, expenses, net result with % change vs. previous month
 - **Top payees** — who you pay the most, with amounts and transaction counts
 - **Accounts overview** — current and previous balances by group and individual account
 
-Export any report to **CSV**. Export the full summary to **PDF**.
+Export any report table to **CSV** or **XLSX**. Export the full summary to **PDF** or a multi-sheet **XLSX** workbook.
 
 ### Trends — spot patterns across years
+
 Year-over-year comparison on a single chart. Select a specific category or top-N by spend. Stacked bars for category comparison by year. And automatic **spending anomaly alerts** — three levels (info / warning / critical) that flag categories spiking above your personal historical average, including new categories you've never spent in before.
 
 ### Net Worth — assets and liabilities over time
+
 Monthly timeline with stacked asset vs. liability bars. Balance sheet snapshot for any selected month. Per-account drilldown: click any account to see its balance trend over time.
 
 ### Year Comparison — Jan–Dec across multiple years
+
 Overlay up to 10 years on one chart. Metric selector: income, expenses, net result, or category spend. Optional YoY% toggle. 12-row monthly comparison table synced with the chart.
 
 ### Categories — deep expense breakdown
+
 Hierarchical category tree up to 3 levels with rolled-up parent totals. Search with instant results. Each category's share of total expenses. Expandable subcategories with improved tree navigation. Filter by date range.
 
 ### Current book workflow
+
 Import and store multiple GnuCash books, then choose one current book for analysis. Dashboard, transactions, reports, net worth, and categories all read from that current book. Mixed-currency books show an explicit warning instead of silently summing across currencies.
 
 ---
@@ -89,12 +93,12 @@ Import and store multiple GnuCash books, then choose one current book for analys
 ## Export summary
 
 | What | Format |
-|------|--------|
-| Transactions (with active filters) | CSV |
-| Monthly summary | CSV |
-| Top payees | CSV |
-| Accounts overview | CSV |
-| Full financial summary | PDF |
+| ---- | ------ |
+| Transactions (with active filters) | CSV, XLSX |
+| Monthly summary | CSV, XLSX |
+| Top payees | CSV, XLSX |
+| Accounts overview | CSV, XLSX |
+| Full financial summary | PDF, XLSX (multi-sheet) |
 
 ---
 
@@ -121,7 +125,7 @@ Heavy computations run once at import and are stored in local SQLite cache table
 
 ## Privacy
 
-- Cashdera runs entirely on your Windows device.
+- Cashdera runs entirely on your device.
 - Your GnuCash files and imported data are **not uploaded anywhere**.
 - Imported data is stored in SQLite files in your OS application data directory — you own them.
 - Deleting an import removes Cashdera's local imported copy and history. It does not delete your original GnuCash file.
@@ -133,14 +137,15 @@ Heavy computations run once at import and are stored in local SQLite cache table
 
 - Work from a **copy or backup** of your `.gnucash` file.
 - Verify reports and totals before making financial decisions based on them.
-- This is beta software. Treat it as an analytics companion, not a replacement for your GnuCash records.
+- Treat Cashdera as an analytics companion, not a replacement for your GnuCash records.
 
 ---
 
-## Verify the installer
+## Verify release checksums
 
 ```powershell
-Get-FileHash .\Cashdera_0.1.0_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Cashdera_1.0.0_x64-setup.exe -Algorithm SHA256
+
 ```
 
 Compare the output with the matching line in `checksums.txt` from the same release.
@@ -154,6 +159,7 @@ Found a bug? Have a feature request? Something confusing?
 **[Open a GitHub Issue](https://github.com/proars/Cashdera/issues/new)** — that's the fastest way to reach me.
 
 Questions that help the most:
+
 - What did you expect vs. what happened?
 - Which GnuCash workflows does Cashdera not cover for you?
 - What would make you recommend this to another GnuCash user?
