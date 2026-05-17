@@ -6,17 +6,19 @@ Cashdera opens your `.gnucash` file and turns it into dashboards, spending trend
 
 > **First Public Release** — free to download and use. Report bugs and ideas via [GitHub Issues](https://github.com/proars/Cashdera/issues).
 
+Official website: **[cashdera.com](https://cashdera.com/)**
+
 ---
 
 ## Download
 
 **[Download latest release →](https://github.com/proars/Cashdera/releases/latest)**
 
-**v1.0.0** (latest):
+**v1.1.0** (latest):
 
-- Windows installers: `Cashdera_1.0.0_x64-setup.exe`, `Cashdera_1.0.0_x64_en-US.msi`
+- Windows installers: `Cashdera_1.1.0_x64-setup.exe`, `Cashdera_1.1.0_x64_en-US.msi`
 - macOS: universal binary (`.dmg` installer)
-- Linux: `Cashdera_1.0.0_x64.deb`, `Cashdera_1.0.0_x64.rpm`, `Cashdera_1.0.0_x64.AppImage`
+- Linux: `Cashdera_1.1.0_x64.deb`, `Cashdera_1.1.0_x64.rpm`, `Cashdera_1.1.0_x64.AppImage`
 - `checksums.txt` — SHA256 hashes for verification
 
 See also: **[Changelog](CHANGELOG.md)** and **[Release Notes](../RELEASE_NOTES.md)** for version-to-version changes.
@@ -144,7 +146,7 @@ Heavy computations run once at import and are stored in local SQLite cache table
 ## Verify release checksums
 
 ```powershell
-Get-FileHash .\Cashdera_1.0.0_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Cashdera_1.1.0_x64-setup.exe -Algorithm SHA256
 
 ```
 
@@ -175,14 +177,3 @@ Cashdera is independent software. It is not affiliated with, sponsored by, or en
 - `EULA.txt` — license terms
 - `PRIVACY.md` — privacy details
 - `THIRD_PARTY_NOTICES.txt` — open source components used
-
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=proars%2FCashdera&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=proars/Cashdera&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=proars/Cashdera&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=proars/Cashdera&type=date&legend=top-left" />
- </picture>
-</a>
