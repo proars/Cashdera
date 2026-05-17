@@ -6,6 +6,8 @@
 [![Download](https://img.shields.io/badge/download-latest_release-126b56?style=flat-square)](https://github.com/proars/Cashdera/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)](https://cashdera.com/download.html)
 
+![Cashdera demo](screenshots/cashdera.gif)
+
 **GnuCash is great for bookkeeping. Analytics? Not so much.**
 
 Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, and net worth reports — all running locally on your desktop. No cloud. No account. No subscription. Your data never leaves your computer.
