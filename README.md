@@ -1,12 +1,16 @@
 # Cashdera
 
+**Free local-first GnuCash analytics — [cashdera.com](https://cashdera.com/)**
+
+[![Website](https://img.shields.io/badge/website-cashdera.com-126b56?style=flat-square)](https://cashdera.com/)
+[![Download](https://img.shields.io/badge/download-latest_release-126b56?style=flat-square)](https://github.com/proars/Cashdera/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)](https://cashdera.com/download.html)
+
 **GnuCash is great for bookkeeping. Analytics? Not so much.**
 
 Cashdera opens your `.gnucash` file and turns it into dashboards, spending trends, and net worth reports — all running locally on your desktop. No cloud. No account. No subscription. Your data never leaves your computer.
 
 > **First Public Release** — free to download and use. Report bugs and ideas via [GitHub Issues](https://github.com/proars/Cashdera/issues).
-
-Official website: **[cashdera.com](https://cashdera.com/)**
 
 ---
 
@@ -43,16 +47,17 @@ It contains ~20 accounts and 22 transactions (USD, Dec 2024 – May 2026) — en
 
 ## What Cashdera gives you
 
-Screenshots:
+| Dashboard | Money Flow |
+| --------- | ---------- |
+| ![Dashboard](screenshots/dashboard.png) | ![Money Flow](screenshots/Money%20Flow.png) |
 
-- ![Dashboard](screenshots/dashboard.png)
-- ![Money Flow](screenshots/Money%20Flow.png)
-- ![Transactions](screenshots/postings.png)
-- ![Reports](screenshots/reports.png)
-- ![Trends](screenshots/trends.png)
-- ![Categories](screenshots/categories.png)
-- ![Net Worth](screenshots/net-worth.png)
-- ![Multi-Year Compare](screenshots/multi-year-compare.png)
+| Reports | Trends | Net Worth |
+| ------- | ------ | --------- |
+| ![Reports](screenshots/reports.png) | ![Trends](screenshots/trends.png) | ![Net Worth](screenshots/net-worth.png) |
+
+| Categories | Multi-Year Compare | Transactions |
+| ---------- | ------------------ | ------------ |
+| ![Categories](screenshots/categories.png) | ![Multi-Year Compare](screenshots/multi-year-compare.png) | ![Transactions](screenshots/postings.png) |
 
 ### Dashboard — the full picture in seconds
 
