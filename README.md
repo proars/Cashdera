@@ -25,7 +25,6 @@ Cashdera opens your `.gnucash` file and turns it into dashboards, spending trend
 - Windows installers: `Cashdera_1.1.0_x64-setup.exe`, `Cashdera_1.1.0_x64_en-US.msi`
 - macOS: universal binary (`.dmg` installer)
 - Linux: `Cashdera_1.1.0_x64.deb`, `Cashdera_1.1.0_x64.rpm`, `Cashdera_1.1.0_x64.AppImage`
-- `checksums.txt` — SHA256 hashes for verification
 
 See also: **[Changelog](CHANGELOG.md)** and **[Release Notes](../RELEASE_NOTES.md)** for version-to-version changes.
 
@@ -43,7 +42,7 @@ It contains ~20 accounts and 22 transactions (USD, Dec 2024 – May 2026) — en
 2. Open Cashdera and click **Import**.
 3. Select `demo.gnucash` — it loads in seconds.
 
-> **Windows SmartScreen warning?** Windows installer may be unsigned. Click "More info → Run anyway." Each release includes `checksums.txt` with SHA256 hashes — see [Verify release checksums](#verify-release-checksums).
+> **Windows SmartScreen warning?** Windows installer may be unsigned. Click "More info → Run anyway." GitHub release assets show SHA256 digests for uploaded files — see [Verify release hashes](#verify-release-hashes).
 
 ---
 
@@ -114,10 +113,10 @@ Import and store multiple GnuCash books, then choose one current book for analys
 ## How it works
 
 1. **Open Cashdera** — no sign-in, no setup wizard
-2. **Import your `.gnucash` file** — plain XML and gzip-compressed both work; format detected automatically
+2. **Import your GnuCash book** — plain XML, gzip-compressed XML, and SQLite-backed books all work; format is detected automatically from file contents, including SQLite books still saved with a `.gnucash` extension
 3. **Explore your data** — all pages load instantly
 
-Import runs in the background with a progress indicator. Cancel at any time. After a successful import or re-import, Cashdera automatically switches the app to that book. Re-import results are tied to the active background job, so the confirmation belongs to the file you just refreshed. Cashdera keeps an import history and adds a **"file changed" badge** when your source `.gnucash` file is updated — one click to re-import without finding the file again. You can also delete a local import from the Recent imports list; this removes Cashdera's local copy and history, not your original `.gnucash` file.
+Import runs in the background with a progress indicator. Cancel at any time. After a successful import or re-import, Cashdera automatically switches the app to that book. Re-import results are tied to the active background job, so the confirmation belongs to the file you just refreshed. Cashdera keeps an import history and adds a **"file changed" badge** when your source GnuCash file is updated — one click to re-import without finding the file again. Recent imports also show whether the original source book was detected as `XML` or `SQLite`. You can delete a local import from the Recent imports list; this removes Cashdera's local copy and history, not your original GnuCash file. SQLite-backed books are covered across the shipped Dashboard, Reports, Transactions, Net Worth, and Budget analytics flows.
 
 Heavy computations run once at import and are stored in local SQLite cache tables. Page switches are instant even on books with 100k+ transactions.
 
@@ -129,6 +128,7 @@ Heavy computations run once at import and are stored in local SQLite cache table
 - **Timezone** — auto-detect or manual selection from 25+ IANA zones (affects date grouping in all reports)
 - **Diagnostics** — About page can copy diagnostics text and export a ZIP with runtime error logs and recent import/job context
 - **Desktop UI behavior** — native browser right-click context menu is disabled across the app
+- **Consistent page layout** — route-level page titles use a shared typography style across the main analytics and settings pages
 
 ---
 
@@ -150,14 +150,14 @@ Heavy computations run once at import and are stored in local SQLite cache table
 
 ---
 
-## Verify release checksums
+## Verify release hashes
 
 ```powershell
 Get-FileHash .\Cashdera_1.1.0_x64-setup.exe -Algorithm SHA256
 
 ```
 
-Compare the output with the matching line in `checksums.txt` from the same release.
+Compare the output with the SHA256 value shown for the same asset on the GitHub release page.
 
 ---
 

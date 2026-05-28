@@ -2,6 +2,33 @@
 
 All notable changes to Cashdera are documented in this file.
 
+## [1.1.0] - 2026-05-27
+
+### Added
+- Settings > About now includes diagnostics copy and ZIP log export actions.
+- Recent imports now show detected source format metadata (`XML` or `SQLite`).
+- SQLite-backed GnuCash books are now covered across shipped analytics and reporting flows.
+- Reports Summary PDF now includes footer page numbering in `Page X of Y` format.
+- Reports Summary PDF now displays currency context in report header and monetary values.
+
+### Changed
+- Route-level page titles now use one consistent typography style across the app.
+- Recent imports keep cleanup scoped to Cashdera local data without touching the original `.gnucash` source file.
+- SQLite-backed book import coverage and release validation were expanded for public release readiness.
+- Reports Summary PDF layout upgraded to finance-style aligned tabular output with repeated headers across page breaks.
+- Reports Summary PDF totals use consistent thousands-separated numeric formatting for money and counts.
+
+### Fixed
+- Dashboard category spending fallback now handles partial date ranges without malformed SQL.
+- Schema initialization now preserves legacy `import_warnings` data instead of dropping the table.
+- Money Flow development diagnostics now use backend tracing instead of direct stderr output.
+- Fixed GitHub Issue #2: desktop export save now writes to the exact user-selected destination path from native Save dialog.
+- Fixed GitHub Issue #2: export cancel/permission failures are surfaced explicitly instead of silently falling back to browser Downloads behavior.
+
+### Notes
+- No known breaking API or cache contract changes were introduced in this release.
+- Existing books remain supported, and legacy local tables are preserved unless a future migration explicitly handles their data.
+
 ## [1.0.0] - 2026-05-16
 
 ### Release
